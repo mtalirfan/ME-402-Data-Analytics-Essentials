@@ -1,0 +1,2107 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="Generator" content="Microsoft Word 15 (filtered)" />
+    <title>Lab - Explore CopyAI</title>
+    <style>
+      /* Font Definitions */
+      @font-face {
+        font-family: Wingdings;
+        panose-1: 5 0 0 0 0 0 0 0 0 0;
+      }
+      @font-face {
+        font-family: SimSun;
+        panose-1: 2 1 6 0 3 1 1 1 1 1;
+      }
+      @font-face {
+        font-family: "Cambria Math";
+        panose-1: 2 4 5 3 5 4 6 3 2 4;
+      }
+      @font-face {
+        font-family: Calibri;
+        panose-1: 2 15 5 2 2 2 4 3 2 4;
+      }
+      @font-face {
+        font-family: Tahoma;
+        panose-1: 2 11 6 4 3 5 4 4 2 4;
+      }
+      @font-face {
+        font-family: Webdings;
+        panose-1: 5 3 1 2 1 5 9 6 7 3;
+      }
+      @font-face {
+        font-family: "\@SimSun";
+        panose-1: 2 1 6 0 3 1 1 1 1 1;
+      }
+      /* Style Definitions */
+      p.MsoNormal,
+      li.MsoNormal,
+      div.MsoNormal {
+        margin-top: 3pt;
+        margin-right: 0in;
+        margin-bottom: 3pt;
+        margin-left: 0in;
+        line-height: 115%;
+        font-size: 11pt;
+        font-family: "Arial", sans-serif;
+      }
+      h1 {
+        mso-style-link: "Heading 1 Char";
+        margin-top: 12pt;
+        margin-right: 0in;
+        margin-bottom: 6pt;
+        margin-left: 0.25in;
+        text-indent: -0.25in;
+        page-break-after: avoid;
+        font-size: 13pt;
+        font-family: "Arial", sans-serif;
+      }
+      h2 {
+        mso-style-link: "Heading 2 Char";
+        margin-top: 12pt;
+        margin-right: 0in;
+        margin-bottom: 6pt;
+        margin-left: 0in;
+        text-indent: 0in;
+        page-break-after: avoid;
+        font-size: 12pt;
+        font-family: "Arial", sans-serif;
+      }
+      h3 {
+        mso-style-link: "Heading 3 Char";
+        margin-top: 12pt;
+        margin-right: 0in;
+        margin-bottom: 6pt;
+        margin-left: 0in;
+        text-indent: 0in;
+        page-break-after: avoid;
+        font-size: 11pt;
+        font-family: "Arial", sans-serif;
+      }
+      h4 {
+        mso-style-link: "Heading 4 Char";
+        margin-top: 0in;
+        margin-right: 0in;
+        margin-bottom: 0in;
+        margin-left: 0.5in;
+        page-break-after: avoid;
+        font-size: 3pt;
+        font-family: "Arial", sans-serif;
+        color: white;
+        font-weight: normal;
+      }
+      p.MsoTitle,
+      li.MsoTitle,
+      div.MsoTitle {
+        mso-style-link: "Title Char";
+        margin-top: 0in;
+        margin-right: 0in;
+        margin-bottom: 6pt;
+        margin-left: 0in;
+        font-size: 16pt;
+        font-family: "Arial", sans-serif;
+        font-weight: bold;
+      }
+      p.MsoTitleCxSpFirst,
+      li.MsoTitleCxSpFirst,
+      div.MsoTitleCxSpFirst {
+        mso-style-link: "Title Char";
+        margin: 0in;
+        font-size: 16pt;
+        font-family: "Arial", sans-serif;
+        font-weight: bold;
+      }
+      p.MsoTitleCxSpMiddle,
+      li.MsoTitleCxSpMiddle,
+      div.MsoTitleCxSpMiddle {
+        mso-style-link: "Title Char";
+        margin: 0in;
+        font-size: 16pt;
+        font-family: "Arial", sans-serif;
+        font-weight: bold;
+      }
+      p.MsoTitleCxSpLast,
+      li.MsoTitleCxSpLast,
+      div.MsoTitleCxSpLast {
+        mso-style-link: "Title Char";
+        margin-top: 0in;
+        margin-right: 0in;
+        margin-bottom: 6pt;
+        margin-left: 0in;
+        font-size: 16pt;
+        font-family: "Arial", sans-serif;
+        font-weight: bold;
+      }
+      a:link,
+      span.MsoHyperlink {
+        color: blue;
+        text-decoration: underline;
+      }
+      span.Heading1Char {
+        mso-style-name: "Heading 1 Char";
+        mso-style-link: "Heading 1";
+        font-weight: bold;
+      }
+      span.Heading2Char {
+        mso-style-name: "Heading 2 Char";
+        mso-style-link: "Heading 2";
+        font-family: "Times New Roman", serif;
+        font-weight: bold;
+      }
+      p.AnswerLineL25,
+      li.AnswerLineL25,
+      div.AnswerLineL25 {
+        mso-style-name: "Answer Line L25";
+        margin-top: 6pt;
+        margin-right: 0in;
+        margin-bottom: 6pt;
+        margin-left: 0.25in;
+        font-size: 10pt;
+        font-family: "Arial", sans-serif;
+        color: white;
+        font-weight: bold;
+        font-style: italic;
+      }
+      p.AnswerLineL50,
+      li.AnswerLineL50,
+      div.AnswerLineL50 {
+        mso-style-name: "Answer Line L50";
+        margin-top: 6pt;
+        margin-right: 0in;
+        margin-bottom: 6pt;
+        margin-left: 0.5in;
+        font-size: 10pt;
+        font-family: "Arial", sans-serif;
+        color: white;
+        font-weight: bold;
+        font-style: italic;
+      }
+      p.TableText,
+      li.TableText,
+      div.TableText {
+        mso-style-name: "Table Text";
+        mso-style-link: "Table Text Char";
+        margin-top: 3pt;
+        margin-right: 0in;
+        margin-bottom: 3pt;
+        margin-left: 0in;
+        font-size: 10pt;
+        font-family: "Arial", sans-serif;
+      }
+      span.TableTextChar {
+        mso-style-name: "Table Text Char";
+        mso-style-link: "Table Text";
+      }
+      p.TableHeading,
+      li.TableHeading,
+      div.TableHeading {
+        mso-style-name: "Table Heading";
+        margin-top: 6pt;
+        margin-right: 0in;
+        margin-bottom: 6pt;
+        margin-left: 0in;
+        text-align: center;
+        line-height: 115%;
+        page-break-after: avoid;
+        font-size: 10pt;
+        font-family: "Arial", sans-serif;
+        font-weight: bold;
+      }
+      p.Bulletlevel1,
+      li.Bulletlevel1,
+      div.Bulletlevel1 {
+        mso-style-name: "Bullet level 1";
+        margin-top: 6pt;
+        margin-right: 0in;
+        margin-bottom: 6pt;
+        margin-left: 0.5in;
+        text-indent: -0.25in;
+        font-size: 10pt;
+        font-family: "Arial", sans-serif;
+      }
+      p.ConfigWindow,
+      li.ConfigWindow,
+      div.ConfigWindow {
+        mso-style-name: "Config Window";
+        margin: 0in;
+        font-size: 3pt;
+        font-family: "Arial", sans-serif;
+        color: white;
+        font-style: italic;
+      }
+      p.SubStepAlpha,
+      li.SubStepAlpha,
+      div.SubStepAlpha {
+        mso-style-name: "SubStep Alpha";
+        margin-top: 6pt;
+        margin-right: 0in;
+        margin-bottom: 6pt;
+        margin-left: 0.5in;
+        text-indent: -0.25in;
+        font-size: 10pt;
+        font-family: "Arial", sans-serif;
+      }
+      p.BodyTextL50,
+      li.BodyTextL50,
+      div.BodyTextL50 {
+        mso-style-name: "Body Text L50";
+        mso-style-link: "Body Text L50 Char";
+        margin-top: 6pt;
+        margin-right: 0in;
+        margin-bottom: 6pt;
+        margin-left: 0.25in;
+        font-size: 10pt;
+        font-family: "Arial", sans-serif;
+      }
+      p.BodyTextL25,
+      li.BodyTextL25,
+      div.BodyTextL25 {
+        mso-style-name: "Body Text L25";
+        mso-style-link: "Body Text L25 Char";
+        margin-top: 6pt;
+        margin-right: 0in;
+        margin-bottom: 6pt;
+        margin-left: 0.25in;
+        font-size: 10pt;
+        font-family: "Arial", sans-serif;
+      }
+      p.Visual,
+      li.Visual,
+      div.Visual {
+        mso-style-name: Visual;
+        margin-top: 12pt;
+        margin-right: 0in;
+        margin-bottom: 12pt;
+        margin-left: .25in;
+        line-height: 115%;
+        font-size: 11pt;
+        font-family: "Arial", sans-serif;
+      }
+      span.LabTitleInstVersred {
+        mso-style-name: "Lab Title Inst Vers \(red\)";
+        font-family: "Arial", sans-serif;
+        color: #ee0000;
+        font-weight: bold;
+      }
+      p.SubStepNum,
+      li.SubStepNum,
+      div.SubStepNum {
+        mso-style-name: "SubStep Num";
+        margin-top: 6pt;
+        margin-right: 0in;
+        margin-bottom: 6pt;
+        margin-left: 0.75in;
+        text-indent: -0.25in;
+        font-size: 10pt;
+        font-family: "Arial", sans-serif;
+      }
+      p.BodyTextL25Bold,
+      li.BodyTextL25Bold,
+      div.BodyTextL25Bold {
+        mso-style-name: "Body Text L25 Bold";
+        margin-top: 6pt;
+        margin-right: 0in;
+        margin-bottom: 6pt;
+        margin-left: 0.25in;
+        font-size: 10pt;
+        font-family: "Arial", sans-serif;
+        font-weight: bold;
+      }
+      span.Heading4Char {
+        mso-style-name: "Heading 4 Char";
+        mso-style-link: "Heading 4";
+        font-family: "Times New Roman", serif;
+        color: white;
+      }
+      span.Heading3Char {
+        mso-style-name: "Heading 3 Char";
+        mso-style-link: "Heading 3";
+        font-family: "Times New Roman", serif;
+        font-weight: bold;
+      }
+      span.TitleChar {
+        mso-style-name: "Title Char";
+        mso-style-link: Title;
+        font-family: SimSun;
+        font-weight: bold;
+      }
+      span.BodyTextL25Char {
+        mso-style-name: "Body Text L25 Char";
+        mso-style-link: "Body Text L25";
+      }
+      p.TableAnswer,
+      li.TableAnswer,
+      div.TableAnswer {
+        mso-style-name: "Table Answer";
+        margin-top: 3pt;
+        margin-right: 0in;
+        margin-bottom: 3pt;
+        margin-left: 0in;
+        font-size: 10pt;
+        font-family: "Arial", sans-serif;
+      }
+      span.BodyTextL50Char {
+        mso-style-name: "Body Text L50 Char";
+        mso-style-link: "Body Text L50";
+      }
+      p.BodyTextL25Answer,
+      li.BodyTextL25Answer,
+      div.BodyTextL25Answer {
+        mso-style-name: "Body Text L25 Answer";
+        mso-style-link: "Body Text L25 Answer Char";
+        margin-top: 6pt;
+        margin-right: 0in;
+        margin-bottom: 6pt;
+        margin-left: 0.25in;
+        background: #d9d9d9;
+        font-size: 10pt;
+        font-family: "Arial", sans-serif;
+        font-weight: bold;
+      }
+      span.BodyTextL25AnswerChar {
+        mso-style-name: "Body Text L25 Answer Char";
+        mso-style-link: "Body Text L25 Answer";
+        background: #d9d9d9;
+        font-weight: bold;
+      }
+      span.AnswerGray {
+        mso-style-name: "Answer Gray";
+        font-family: "Arial", sans-serif;
+        border: none;
+        /* background: #d9d9d9; */
+        font-weight: bold;
+      }
+      .MsoChpDefault {
+        font-size: 10pt;
+        font-family: "Arial", sans-serif;
+      }
+      /* Page Definitions */
+      @page WordSection1 {
+        size: 8.5in 11in;
+        margin: 76.3pt 0.75in 0.9in 0.75in;
+      }
+      div.WordSection1 {
+        page: WordSection1;
+      }
+      /* List Definitions */
+      ol {
+        margin-bottom: 0in;
+      }
+      ul {
+        margin-bottom: 0in;
+      }
+
+      /* Add css for textarea */
+
+      .AnswerGray {
+        padding: 0.2rem;
+      }
+
+      .question-action-container {
+        margin-top: 6pt;
+        margin-right: 0in;
+        margin-bottom: 6pt;
+        margin-left: 0.25in;
+      }
+
+      .show-answer,
+.hide-answer {
+    padding: 0.5rem 1rem;
+    background-color: #00bceb;
+    color: #fff;
+    border: none;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+      .global-action-container {
+        display: flex;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      .global-action-container .btn__action {
+        margin: 10px;
+      }
+
+      .btn__container button.btn__action:not(.is-full-width) {
+        width: calc(50% - 0.5%);
+      }
+
+      .btn-text {
+    border: 0px;
+    padding: 0.5rem 1rem;
+    background-color: #6abf4b;
+    color: #fff;
+    margin-top: 1rem;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+      .hidden {
+        display: none;
+      }
+      td .AnswerLineL50 {
+        margin-left: 0;
+      }
+
+
+      /* dark theme */
+
+      .dark-theme {
+        color: #fff;
+      }
+      .dark-theme .dark-color {
+        color: #fff !important;
+      }
+      .dark-theme p.ConfigWindow,
+      .dark-theme li.ConfigWindow,
+      .dark-theme div.ConfigWindow {
+        mso-style-name: "Config Window";
+        color: #212328;
+      }
+      .dark-theme h4 {
+        color: #212328;
+      }
+      .dark-theme .MsoTitle span {
+        color: #fff !important;
+      }
+      .dark-theme textarea {
+        background-color: #212328;
+        color: #fff;
+      }
+      .dark-theme .BodyTextL25Answer {
+        background-color: #000;
+        color: #fff;
+      }
+      .dark-theme .BodyTextL25Answer > span {
+        padding: 4px;
+      }
+      .dark-theme .BodyTextL25Answer span {
+        color: #fff;
+      }
+      .dark-theme table tbody tr td {
+        color: #fff !important;
+      }
+      .dark-theme table tbody tr td p span {
+        color: #fff !important;
+      }
+      .dark-theme table .TableHeading {
+        color: #000;
+      }
+      .dark-theme p.BodyTextL50Answer,
+      .dark-theme li.BodyTextL50Answer,
+      .dark-theme div.BodyTextL50Answer {
+        background: #0e0f12;
+      }
+      .dark-theme p.BodyTextL25Answer,
+      .dark-theme li.BodyTextL25Answer,
+      .dark-theme div.BodyTextL25Answer {
+        background: #0e0f12;
+      }
+      span.AnswerGray{
+              }
+      .dark-theme .AnswerGray{
+        color:white      }
+    </style>
+  </head>
+  <body lang="EN-US" link="blue" vlink="purple" style="word-wrap: break-word">
+    <div class="WordSection1">
+      <p class="MsoTitle">
+        <span style="color: #ee0000; font-weight: normal"
+          ><b
+            ><span style="color: windowtext">Lab - Explore CopyAI</span></b
+          ></span
+        >
+      </p>
+
+      <h1>Objectives</h1>
+
+      <p class="BodyTextL25">
+        This lab provides opportunities for learners to explore tools for
+        creative marketing material generation using AI language model provided
+        by the website CopyAI.
+      </p>
+
+      <p class="BodyTextL25Bold">
+        Part 1: Explore the CopyAI Website and its Tools
+      </p>
+
+      <p class="BodyTextL25Bold">
+        Part 2: Explore Access Options and Pricing Information
+      </p>
+
+      <p class="BodyTextL25Bold">
+        Part 3: Sign up and Create a Marketing Product
+      </p>
+
+      <h1>Background / Scenario</h1>
+
+      <p class="BodyTextL25">
+        In this lab, you will visit and explore features and products offered by
+        the website
+        <a target="_blank" href="https://www.copy.ai/" target="_blank">https://www.copy.ai/</a>.
+        You will also sign up with a free account to create a marketing product.
+      </p>
+
+      <h1>Required Resources</h1>
+
+      <p class="Bulletlevel1">
+        <span style="font-size: 7pt; font-family: Webdings"
+          >=<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp; </span></span
+        >A device with an internet browser and an internet connection
+      </p>
+
+      <h1>Instructions</h1>
+
+      <h2 style="margin-left: 0in; text-indent: 0in">
+        Part 1: Explore the CopyAI Website and its Tools
+      </h2>
+
+      <p class="BodyTextL25">
+        Use a web browser and visit the CopyAI website at
+        <a target="_blank" href="https://www.copy.ai/" target="_blank">https://www.copy.ai/</a>.
+        Explore <b>Use Cases</b>, <b>Resources</b>, and <b>Weekly Demos</b>.
+      </p>
+
+      <h4>Questions:</h4>
+
+      <p class="BodyTextL25" style="margin-top: 0in">
+        Describe the general service offered by the website.
+      </p>
+
+      <!-- <p class="AnswerLineL25">Type your answers here.</p> -->
+      <div class="question-container">
+        <div class="AnswerLineL25">
+          <fieldset
+            style="width: 50%; font-size: 10px; font-style: normal; color: gray"
+          >
+            <legend>Answer Area</legend>
+            <textarea
+              rows="3"
+              name="answerArea"
+              placeholder="Type your answer here."
+              style="border: none; width: 100%"
+            ></textarea>
+          </fieldset>
+        </div>
+
+        <p class="BodyTextL25Answer">
+          <span class="AnswerGray"
+            ><span style=" border: none"
+              ><span style="border: none"
+                >Answer will vary. A few examples include:<br />
+                <br />
+                With CopyAI’s automated creativity tools, users can generate
+                marketing copy in seconds.<br />
+                <br />
+                Built on top of the world’s most advanced AI language model,
+                CopyAI is helping thousands of people turbo-charge their
+                creativity.</span
+              ></span
+            ></span
+          >
+        </p>
+
+        <div class="question-action-container">
+          <button class="MetroBtn show-answer">Show Answer</button>
+          <button class="MetroBtn hide-answer">Hide Answer</button>
+        </div>
+      </div>
+
+      <!-- <p class="BodyTextL25Answer">
+        <span style="color: black"
+          >Answer will vary. A few examples include:<br />
+          <br />
+          With CopyAI’s automated creativity tools, users can generate marketing
+          copy in seconds.<br />
+          <br />
+          Built on top of the world’s most advanced AI language model, CopyAI is
+          helping thousands of people turbo-charge their creativity.</span
+        >
+      </p> -->
+
+      <p class="BodyTextL25">
+        List six categories of product that people can produce through the
+        service by CopyAI website.
+      </p>
+
+      <!-- <p class="AnswerLineL25">Type your answers here.</p> -->
+
+      <div class="question-container">
+        <div class="AnswerLineL25">
+          <fieldset
+            style="width: 50%; font-size: 10px; font-style: normal; color: gray"
+          >
+            <legend>Answer Area</legend>
+            <textarea
+              rows="3"
+              name="answerArea"
+              placeholder="Type your answer here."
+              style="border: none; width: 100%"
+            ></textarea>
+          </fieldset>
+        </div>
+
+        <p class="BodyTextL25Answer">
+          <span class="AnswerGray"
+            ><span style=" border: none"
+              ><span style="border: none"
+                >According to the website, six types of products can be created
+                with CopyAI:<br />
+                <br />
+                Digital Ad Copy<br />
+                Social Media Content<br />
+                Website Copy<br />
+                eCommerce Copy<br />
+                Blog Content<br />
+                Sales Copy</span
+              ></span
+            ></span
+          >
+        </p>
+
+        <div class="question-action-container">
+          <button class="MetroBtn show-answer">Show Answer</button>
+          <button class="MetroBtn hide-answer">Hide Answer</button>
+        </div>
+      </div>
+
+      <!-- <p class="BodyTextL25Answer">
+        <span style="color: black"
+          >According to the website, six types of products can be created with
+          CopyAI:<br />
+          <br />
+          Digital Ad Copy<br />
+          Social Media Content<br />
+          Website Copy<br />
+          eCommerce Copy<br />
+          Blog Content<br />
+          Sales Copy</span
+        >
+      </p> -->
+
+      <p class="BodyTextL25">
+        List the steps to create a product on the website.
+      </p>
+
+      <!-- <p class="AnswerLineL25">Type your answers here.</p> -->
+      <div class="question-container">
+        <div class="AnswerLineL25">
+          <fieldset
+            style="width: 50%; font-size: 10px; font-style: normal; color: gray"
+          >
+            <legend>Answer Area</legend>
+            <textarea
+              rows="3"
+              name="answerArea"
+              placeholder="Type your answer here."
+              style="border: none; width: 100%"
+            ></textarea>
+          </fieldset>
+        </div>
+
+        <p class="BodyTextL25Answer">
+          <span class="AnswerGray"
+            ><span style=" border: none"
+              ><span style="border: none"
+                >According to the website, a user can create a product in 3
+                steps:<br />
+                <br />
+                Select a type of copy<br />
+                Describe your product<br />
+                Get your results and edit</span
+              ></span
+            ></span
+          >
+        </p>
+
+        <div class="question-action-container">
+          <button class="MetroBtn show-answer">Show Answer</button>
+          <button class="MetroBtn hide-answer">Hide Answer</button>
+        </div>
+      </div>
+
+      <!-- <p class="BodyTextL25Answer">
+        <span style="color: black"
+          >According to the website, a user can create a product in 3 steps:<br />
+          <br />
+          Select a type of copy<br />
+          Describe your product<br />
+          Get your results and edit</span
+        >
+      </p> -->
+
+      <h2 style="margin-left: 0in; text-indent: 0in">
+        Part 2: Explore Access Options and Pricing Information
+      </h2>
+
+      <p class="BodyTextL25">Click <b>Pricing</b> on the website.</p>
+
+      <h4>Questions:</h4>
+
+      <p class="BodyTextL25" style="margin-top: 0in">
+        List access options and the cost associated with each option.
+      </p>
+
+      <!-- <p class="AnswerLineL25">Type your answers here.</p> -->
+      <div class="question-container">
+        <div class="AnswerLineL25">
+          <fieldset
+            style="width: 50%; font-size: 10px; font-style: normal; color: gray"
+          >
+            <legend>Answer Area</legend>
+            <textarea
+              rows="3"
+              name="answerArea"
+              placeholder="Type your answer here."
+              style="border: none; width: 100%"
+            ></textarea>
+          </fieldset>
+        </div>
+
+        <p class="BodyTextL25Answer">
+          <span class="AnswerGray"
+            ><span style=" border: none"
+              ><span style="border: none"
+                >According to the website, there are three options:<br />
+                <br />
+                1. Free Plan $0<br />
+                2. Pro Plan $35/month or $420/year<br />
+                3. Enterprise Plan custom billed yearly</span
+              ></span
+            ></span
+          >
+        </p>
+
+        <div class="question-action-container">
+          <button class="MetroBtn show-answer">Show Answer</button>
+          <button class="MetroBtn hide-answer">Hide Answer</button>
+        </div>
+      </div>
+
+      <!-- <p class="BodyTextL25Answer">
+        <span style="color: black"
+          >According to the website, there are three options:<br />
+          <br />
+          1. Free Plan $0<br />
+          2. Pro Plan $35/month or $420/year<br />
+          3. Enterprise Plan custom billed yearly</span
+        >
+      </p> -->
+
+      <p class="BodyTextL25">List the features provided for each option.</p>
+
+      <p class="ConfigWindow">&nbsp;</p>
+
+      <div class="question-container">
+        <table
+          class="LabTableStyle"
+          align="center"
+          border="1"
+          cellspacing="0"
+          cellpadding="0"
+          width="672"
+          style="width: 7in; border-collapse: collapse; border: none"
+        >
+          <thead>
+            <tr style="page-break-inside: avoid; height: 21.5pt">
+              <td
+                width="224"
+                valign="bottom"
+                style="
+                  width: 168pt;
+                  border: solid windowtext 1pt;
+                  background: #dbe5f1;
+                  padding: 0.7pt 5.75pt 0.7pt 5.75pt;
+                  height: 21.5pt;
+                "
+              >
+                <p class="TableHeading">
+                  <span style="color: black">Free Plan</span>
+                </p>
+              </td>
+              <td
+                width="224"
+                valign="bottom"
+                style="
+                  width: 168pt;
+                  border: solid windowtext 1pt;
+                  border-left: none;
+                  background: #dbe5f1;
+                  padding: 0.7pt 5.75pt 0.7pt 5.75pt;
+                  height: 21.5pt;
+                "
+              >
+                <p class="TableHeading">
+                  <span style="color: black">Pro</span>
+                </p>
+              </td>
+              <td
+                width="224"
+                valign="bottom"
+                style="
+                  width: 168pt;
+                  border: solid windowtext 1pt;
+                  border-left: none;
+                  background: #dbe5f1;
+                  padding: 0.7pt 5.75pt 0.7pt 5.75pt;
+                  height: 21.5pt;
+                "
+              >
+                <p class="TableHeading">
+                  <span style="color: black">Enterprise</span>
+                </p>
+              </td>
+            </tr>
+          </thead>
+          <tr style="page-break-inside: avoid; height: 21.25pt">
+            <td
+              width="224"
+              valign="bottom"
+              style="
+                width: 168pt;
+                border: solid windowtext 1pt;
+                border-top: none;
+                padding: 0.7pt 5.75pt 0.7pt 5.75pt;
+                height: 21.25pt;
+              "
+            >
+              <!-- <p class="TableAnswer">&nbsp;</p> -->
+              <div class=AnswerLineL50>
+							<fieldset style="font-size:10px;font-style:normal;color:gray;">
+								<legend>Answer Area</legend><textarea rows="3" name="answerArea"
+									placeholder="Type your answer here." style="border:none;width:100%;"></textarea>
+							</fieldset>
+						</div>
+            </td>
+            <td
+              width="224"
+              valign="bottom"
+              style="
+                width: 168pt;
+                border-top: none;
+                border-left: none;
+                border-bottom: solid windowtext 1pt;
+                border-right: solid windowtext 1pt;
+                padding: 0.7pt 5.75pt 0.7pt 5.75pt;
+                height: 21.25pt;
+              "
+            >
+              <!-- <p class="TableAnswer">&nbsp;</p> -->
+              <div class=AnswerLineL50>
+							<fieldset style="font-size:10px;font-style:normal;color:gray;">
+								<legend>Answer Area</legend><textarea rows="3" name="answerArea"
+									placeholder="Type your answer here." style="border:none;width:100%;"></textarea>
+							</fieldset>
+						</div>
+            </td>
+            <td
+              width="224"
+              valign="bottom"
+              style="
+                width: 168pt;
+                border-top: none;
+                border-left: none;
+                border-bottom: solid windowtext 1pt;
+                border-right: solid windowtext 1pt;
+                padding: 0.7pt 5.75pt 0.7pt 5.75pt;
+                height: 21.25pt;
+              "
+            >
+              <!-- <p class="TableAnswer">&nbsp;</p> -->
+              <div class=AnswerLineL50>
+							<fieldset style="font-size:10px;font-style:normal;color:gray;">
+								<legend>Answer Area</legend><textarea rows="3" name="answerArea"
+									placeholder="Type your answer here." style="border:none;width:100%;"></textarea>
+							</fieldset>
+						</div>
+            </td>
+          </tr>
+          <tr style="page-break-inside: avoid; height: 8.05pt">
+            <td
+              width="224"
+              valign="bottom"
+              style="
+                width: 168pt;
+                border: solid windowtext 1pt;
+                border-top: none;
+                padding: 0.7pt 5.75pt 0.7pt 5.75pt;
+                height: 8.05pt;
+              "
+            >
+              <!-- <p class="TableAnswer">&nbsp;</p> -->
+              <div class=AnswerLineL50>
+							<fieldset style="font-size:10px;font-style:normal;color:gray;">
+								<legend>Answer Area</legend><textarea rows="3" name="answerArea"
+									placeholder="Type your answer here." style="border:none;width:100%;"></textarea>
+							</fieldset>
+						</div>
+            </td>
+            <td
+              width="224"
+              valign="bottom"
+              style="
+                width: 168pt;
+                border-top: none;
+                border-left: none;
+                border-bottom: solid windowtext 1pt;
+                border-right: solid windowtext 1pt;
+                padding: 0.7pt 5.75pt 0.7pt 5.75pt;
+                height: 8.05pt;
+              "
+            >
+              <!-- <p class="TableAnswer">&nbsp;</p> -->
+              <div class=AnswerLineL50>
+							<fieldset style="font-size:10px;font-style:normal;color:gray;">
+								<legend>Answer Area</legend><textarea rows="3" name="answerArea"
+									placeholder="Type your answer here." style="border:none;width:100%;"></textarea>
+							</fieldset>
+						</div>
+            </td>
+            <td
+              width="224"
+              valign="bottom"
+              style="
+                width: 168pt;
+                border-top: none;
+                border-left: none;
+                border-bottom: solid windowtext 1pt;
+                border-right: solid windowtext 1pt;
+                padding: 0.7pt 5.75pt 0.7pt 5.75pt;
+                height: 8.05pt;
+              "
+            >
+              <!-- <p class="TableAnswer">&nbsp;</p> -->
+              <div class=AnswerLineL50>
+							<fieldset style="font-size:10px;font-style:normal;color:gray;">
+								<legend>Answer Area</legend><textarea rows="3" name="answerArea"
+									placeholder="Type your answer here." style="border:none;width:100%;"></textarea>
+							</fieldset>
+						</div>
+            </td>
+          </tr>
+          <tr style="page-break-inside: avoid; height: 21.5pt">
+            <td
+              width="224"
+              valign="bottom"
+              style="
+                width: 168pt;
+                border: solid windowtext 1pt;
+                border-top: none;
+                padding: 0.7pt 5.75pt 0.7pt 5.75pt;
+                height: 21.5pt;
+              "
+            >
+              <!-- <p class="TableAnswer">&nbsp;</p> -->
+              <div class=AnswerLineL50>
+							<fieldset style="font-size:10px;font-style:normal;color:gray;">
+								<legend>Answer Area</legend><textarea rows="3" name="answerArea"
+									placeholder="Type your answer here." style="border:none;width:100%;"></textarea>
+							</fieldset>
+						</div>
+            </td>
+            <td
+              width="224"
+              valign="bottom"
+              style="
+                width: 168pt;
+                border-top: none;
+                border-left: none;
+                border-bottom: solid windowtext 1pt;
+                border-right: solid windowtext 1pt;
+                padding: 0.7pt 5.75pt 0.7pt 5.75pt;
+                height: 21.5pt;
+              "
+            >
+              <!-- <p class="TableAnswer">&nbsp;</p> -->
+              <div class=AnswerLineL50>
+							<fieldset style="font-size:10px;font-style:normal;color:gray;">
+								<legend>Answer Area</legend><textarea rows="3" name="answerArea"
+									placeholder="Type your answer here." style="border:none;width:100%;"></textarea>
+							</fieldset>
+						</div>
+            </td>
+            <td
+              width="224"
+              valign="bottom"
+              style="
+                width: 168pt;
+                border-top: none;
+                border-left: none;
+                border-bottom: solid windowtext 1pt;
+                border-right: solid windowtext 1pt;
+                padding: 0.7pt 5.75pt 0.7pt 5.75pt;
+                height: 21.5pt;
+              "
+            >
+              <!-- <p class="TableAnswer">&nbsp;</p> -->
+              <div class=AnswerLineL50>
+							<fieldset style="font-size:10px;font-style:normal;color:gray;">
+								<legend>Answer Area</legend><textarea rows="3" name="answerArea"
+									placeholder="Type your answer here." style="border:none;width:100%;"></textarea>
+							</fieldset>
+						</div>
+            </td>
+          </tr>
+          <tr style="page-break-inside: avoid; height: 21.5pt">
+            <td
+              width="224"
+              valign="bottom"
+              style="
+                width: 168pt;
+                border: solid windowtext 1pt;
+                border-top: none;
+                padding: 0.7pt 5.75pt 0.7pt 5.75pt;
+                height: 21.5pt;
+              "
+            >
+              <!-- <p class="TableAnswer">&nbsp;</p> -->
+              <div class=AnswerLineL50>
+							<fieldset style="font-size:10px;font-style:normal;color:gray;">
+								<legend>Answer Area</legend><textarea rows="3" name="answerArea"
+									placeholder="Type your answer here." style="border:none;width:100%;"></textarea>
+							</fieldset>
+						</div>
+            </td>
+            <td
+              width="224"
+              valign="bottom"
+              style="
+                width: 168pt;
+                border-top: none;
+                border-left: none;
+                border-bottom: solid windowtext 1pt;
+                border-right: solid windowtext 1pt;
+                padding: 0.7pt 5.75pt 0.7pt 5.75pt;
+                height: 21.5pt;
+              "
+            >
+              <!-- <p class="TableAnswer">&nbsp;</p> -->
+              <div class=AnswerLineL50>
+							<fieldset style="font-size:10px;font-style:normal;color:gray;">
+								<legend>Answer Area</legend><textarea rows="3" name="answerArea"
+									placeholder="Type your answer here." style="border:none;width:100%;"></textarea>
+							</fieldset>
+						</div>
+            </td>
+            <td
+              width="224"
+              valign="bottom"
+              style="
+                width: 168pt;
+                border-top: none;
+                border-left: none;
+                border-bottom: solid windowtext 1pt;
+                border-right: solid windowtext 1pt;
+                padding: 0.7pt 5.75pt 0.7pt 5.75pt;
+                height: 21.5pt;
+              "
+            >
+              <!-- <p class="TableAnswer">&nbsp;</p> -->
+              <div class=AnswerLineL50>
+							<fieldset style="font-size:10px;font-style:normal;color:gray;">
+								<legend>Answer Area</legend><textarea rows="3" name="answerArea"
+									placeholder="Type your answer here." style="border:none;width:100%;"></textarea>
+							</fieldset>
+						</div>
+            </td>
+          </tr>
+          <tr style="page-break-inside: avoid; height: 21.25pt">
+            <td
+              width="224"
+              valign="bottom"
+              style="
+                width: 168pt;
+                border: solid windowtext 1pt;
+                border-top: none;
+                padding: 0.7pt 5.75pt 0.7pt 5.75pt;
+                height: 21.25pt;
+              "
+            >
+              <!-- <p class="TableAnswer">&nbsp;</p> -->
+              <div class=AnswerLineL50>
+							<fieldset style="font-size:10px;font-style:normal;color:gray;">
+								<legend>Answer Area</legend><textarea rows="3" name="answerArea"
+									placeholder="Type your answer here." style="border:none;width:100%;"></textarea>
+							</fieldset>
+						</div>
+            </td>
+            <td
+              width="224"
+              valign="bottom"
+              style="
+                width: 168pt;
+                border-top: none;
+                border-left: none;
+                border-bottom: solid windowtext 1pt;
+                border-right: solid windowtext 1pt;
+                padding: 0.7pt 5.75pt 0.7pt 5.75pt;
+                height: 21.25pt;
+              "
+            >
+              <!-- <p class="TableAnswer">&nbsp;</p> -->
+              <div class=AnswerLineL50>
+							<fieldset style="font-size:10px;font-style:normal;color:gray;">
+								<legend>Answer Area</legend><textarea rows="3" name="answerArea"
+									placeholder="Type your answer here." style="border:none;width:100%;"></textarea>
+							</fieldset>
+						</div>
+            </td>
+            <td
+              width="224"
+              valign="bottom"
+              style="
+                width: 168pt;
+                border-top: none;
+                border-left: none;
+                border-bottom: solid windowtext 1pt;
+                border-right: solid windowtext 1pt;
+                padding: 0.7pt 5.75pt 0.7pt 5.75pt;
+                height: 21.25pt;
+              "
+            >
+              <!-- <p class="TableAnswer">&nbsp;</p> -->
+              <div class=AnswerLineL50>
+							<fieldset style="font-size:10px;font-style:normal;color:gray;">
+								<legend>Answer Area</legend><textarea rows="3" name="answerArea"
+									placeholder="Type your answer here." style="border:none;width:100%;"></textarea>
+							</fieldset>
+						</div>
+            </td>
+          </tr>
+          <tr style="page-break-inside: avoid; height: 21.25pt">
+            <td
+              width="224"
+              valign="bottom"
+              style="
+                width: 168pt;
+                border: solid windowtext 1pt;
+                border-top: none;
+                padding: 0.7pt 5.75pt 0.7pt 5.75pt;
+                height: 21.25pt;
+              "
+            >
+              <!-- <p class="TableAnswer">&nbsp;</p> -->
+              <div class=AnswerLineL50>
+							<fieldset style="font-size:10px;font-style:normal;color:gray;">
+								<legend>Answer Area</legend><textarea rows="3" name="answerArea"
+									placeholder="Type your answer here." style="border:none;width:100%;"></textarea>
+							</fieldset>
+						</div>
+            </td>
+            <td
+              width="224"
+              valign="bottom"
+              style="
+                width: 168pt;
+                border-top: none;
+                border-left: none;
+                border-bottom: solid windowtext 1pt;
+                border-right: solid windowtext 1pt;
+                padding: 0.7pt 5.75pt 0.7pt 5.75pt;
+                height: 21.25pt;
+              "
+            >
+              <!-- <p class="TableAnswer">&nbsp;</p> -->
+              <div class=AnswerLineL50>
+							<fieldset style="font-size:10px;font-style:normal;color:gray;">
+								<legend>Answer Area</legend><textarea rows="3" name="answerArea"
+									placeholder="Type your answer here." style="border:none;width:100%;"></textarea>
+							</fieldset>
+						</div>
+            </td>
+            <td
+              width="224"
+              valign="bottom"
+              style="
+                width: 168pt;
+                border-top: none;
+                border-left: none;
+                border-bottom: solid windowtext 1pt;
+                border-right: solid windowtext 1pt;
+                padding: 0.7pt 5.75pt 0.7pt 5.75pt;
+                height: 21.25pt;
+              "
+            >
+              <!-- <p class="TableAnswer">&nbsp;</p> -->
+              <div class=AnswerLineL50>
+							<fieldset style="font-size:10px;font-style:normal;color:gray;">
+								<legend>Answer Area</legend><textarea rows="3" name="answerArea"
+									placeholder="Type your answer here." style="border:none;width:100%;"></textarea>
+							</fieldset>
+						</div>
+            </td>
+          </tr>
+          <tr style="page-break-inside: avoid; height: 21.5pt">
+            <td
+              width="224"
+              valign="bottom"
+              style="
+                width: 168pt;
+                border: solid windowtext 1pt;
+                border-top: none;
+                padding: 0.7pt 5.75pt 0.7pt 5.75pt;
+                height: 21.5pt;
+              "
+            >
+              <!-- <p class="TableAnswer">&nbsp;</p> -->
+              <div class=AnswerLineL50>
+							<fieldset style="font-size:10px;font-style:normal;color:gray;">
+								<legend>Answer Area</legend><textarea rows="3" name="answerArea"
+									placeholder="Type your answer here." style="border:none;width:100%;"></textarea>
+							</fieldset>
+						</div>
+            </td>
+            <td
+              width="224"
+              valign="bottom"
+              style="
+                width: 168pt;
+                border-top: none;
+                border-left: none;
+                border-bottom: solid windowtext 1pt;
+                border-right: solid windowtext 1pt;
+                padding: 0.7pt 5.75pt 0.7pt 5.75pt;
+                height: 21.5pt;
+              "
+            >
+              <!-- <p class="TableAnswer">&nbsp;</p> -->
+              <div class=AnswerLineL50>
+							<fieldset style="font-size:10px;font-style:normal;color:gray;">
+								<legend>Answer Area</legend><textarea rows="3" name="answerArea"
+									placeholder="Type your answer here." style="border:none;width:100%;"></textarea>
+							</fieldset>
+						</div>
+            </td>
+            <td
+              width="224"
+              valign="bottom"
+              style="
+                width: 168pt;
+                border-top: none;
+                border-left: none;
+                border-bottom: solid windowtext 1pt;
+                border-right: solid windowtext 1pt;
+                padding: 0.7pt 5.75pt 0.7pt 5.75pt;
+                height: 21.5pt;
+              "
+            >
+              <!-- <p class="TableAnswer">&nbsp;</p> -->
+              <div class=AnswerLineL50>
+							<fieldset style="font-size:10px;font-style:normal;color:gray;">
+								<legend>Answer Area</legend><textarea rows="3" name="answerArea"
+									placeholder="Type your answer here." style="border:none;width:100%;"></textarea>
+							</fieldset>
+						</div>
+            </td>
+          </tr>
+          <tr style="page-break-inside: avoid; height: 21.5pt">
+            <td
+              width="224"
+              valign="bottom"
+              style="
+                width: 168pt;
+                border: solid windowtext 1pt;
+                border-top: none;
+                padding: 0.7pt 5.75pt 0.7pt 5.75pt;
+                height: 21.5pt;
+              "
+            >
+              <!-- <p class="TableAnswer">&nbsp;</p> -->
+              <div class=AnswerLineL50>
+							<fieldset style="font-size:10px;font-style:normal;color:gray;">
+								<legend>Answer Area</legend><textarea rows="3" name="answerArea"
+									placeholder="Type your answer here." style="border:none;width:100%;"></textarea>
+							</fieldset>
+						</div>
+            </td>
+            <td
+              width="224"
+              valign="bottom"
+              style="
+                width: 168pt;
+                border-top: none;
+                border-left: none;
+                border-bottom: solid windowtext 1pt;
+                border-right: solid windowtext 1pt;
+                padding: 0.7pt 5.75pt 0.7pt 5.75pt;
+                height: 21.5pt;
+              "
+            >
+              <!-- <p class="TableAnswer">&nbsp;</p> -->
+              <div class=AnswerLineL50>
+							<fieldset style="font-size:10px;font-style:normal;color:gray;">
+								<legend>Answer Area</legend><textarea rows="3" name="answerArea"
+									placeholder="Type your answer here." style="border:none;width:100%;"></textarea>
+							</fieldset>
+						</div>
+            </td>
+            <td
+              width="224"
+              valign="bottom"
+              style="
+                width: 168pt;
+                border-top: none;
+                border-left: none;
+                border-bottom: solid windowtext 1pt;
+                border-right: solid windowtext 1pt;
+                padding: 0.7pt 5.75pt 0.7pt 5.75pt;
+                height: 21.5pt;
+              "
+            >
+              <!-- <p class="TableAnswer">&nbsp;</p> -->
+              <div class=AnswerLineL50>
+							<fieldset style="font-size:10px;font-style:normal;color:gray;">
+								<legend>Answer Area</legend><textarea rows="3" name="answerArea"
+									placeholder="Type your answer here." style="border:none;width:100%;"></textarea>
+							</fieldset>
+						</div>
+            </td>
+          </tr>
+        </table>
+
+        <p class="ConfigWindow">Blank Line, No additional information</p>
+        <p class="BodyTextL25">
+          Click <b>Show Answer</b> to see a couple of examples.
+        </p>
+        <p class="BodyTextL50">
+          <span class="AnswerGray" style="background-color: transparent">
+            <table
+              class="LabAnswerTable"
+              align="center"
+              border="1"
+              cellspacing="0"
+              cellpadding="0"
+              width="672"
+              style="width: 7in; border-collapse: collapse; border: none"
+            >
+              <thead>
+                <tr style="page-break-inside: avoid; height: 21.5pt">
+                  <td
+                    width="224"
+                    valign="bottom"
+                    style="
+                      width: 168pt;
+                      border: solid windowtext 1pt;
+                      background: #f2dbdb;
+                      padding: 0.7pt 5.75pt 0.7pt 5.75pt;
+                      height: 21.5pt;
+                    "
+                  >
+                    <p class="TableHeading">
+                      <span style="color: black">Free Plan</span>
+                    </p>
+                  </td>
+                  <td
+                    width="224"
+                    valign="bottom"
+                    style="
+                      width: 168pt;
+                      border: solid windowtext 1pt;
+                      border-left: none;
+                      background: #f2dbdb;
+                      padding: 0.7pt 5.75pt 0.7pt 5.75pt;
+                      height: 21.5pt;
+                    "
+                  >
+                    <p class="TableHeading">
+                      <span style="color: black">Pro</span>
+                    </p>
+                  </td>
+                  <td
+                    width="224"
+                    valign="bottom"
+                    style="
+                      width: 168pt;
+                      border: solid windowtext 1pt;
+                      border-left: none;
+                      background: #f2dbdb;
+                      padding: 0.7pt 5.75pt 0.7pt 5.75pt;
+                      height: 21.5pt;
+                    "
+                  >
+                    <p class="TableHeading">
+                      <span style="color: black">Enterprise</span>
+                    </p>
+                  </td>
+                </tr>
+              </thead>
+              <tr style="page-break-inside: avoid; height: 21.25pt">
+                <td
+                  width="224"
+                  valign="bottom"
+                  style="
+                    width: 168pt;
+                    border: solid windowtext 1pt;
+                    border-top: none;
+                    padding: 0.7pt 5.75pt 0.7pt 5.75pt;
+                    height: 21.25pt;
+                  "
+                >
+                  <p class="TableText">10 credits per month</p>
+                </td>
+                <td
+                  width="224"
+                  valign="bottom"
+                  style="
+                    width: 168pt;
+                    border-top: none;
+                    border-left: none;
+                    border-bottom: solid windowtext 1pt;
+                    border-right: solid windowtext 1pt;
+                    padding: 0.7pt 5.75pt 0.7pt 5.75pt;
+                    height: 21.25pt;
+                  "
+                >
+                  <p class="TableText">Unlimited credits</p>
+                </td>
+                <td
+                  width="224"
+                  valign="bottom"
+                  style="
+                    width: 168pt;
+                    border-top: none;
+                    border-left: none;
+                    border-bottom: solid windowtext 1pt;
+                    border-right: solid windowtext 1pt;
+                    padding: 0.7pt 5.75pt 0.7pt 5.75pt;
+                    height: 21.25pt;
+                  "
+                >
+                  <p class="TableText">Unlimited credits</p>
+                </td>
+              </tr>
+              <tr style="page-break-inside: avoid; height: 31.7pt">
+                <td
+                  width="224"
+                  valign="bottom"
+                  style="
+                    width: 168pt;
+                    border: solid windowtext 1pt;
+                    border-top: none;
+                    padding: 0.7pt 5.75pt 0.7pt 5.75pt;
+                    height: 31.7pt;
+                  "
+                >
+                  <p class="TableText">100 bonus credits for the first month</p>
+                </td>
+                <td
+                  width="224"
+                  valign="bottom"
+                  style="
+                    width: 168pt;
+                    border-top: none;
+                    border-left: none;
+                    border-bottom: solid windowtext 1pt;
+                    border-right: solid windowtext 1pt;
+                    padding: 0.7pt 5.75pt 0.7pt 5.75pt;
+                    height: 31.7pt;
+                  "
+                >
+                  <p class="TableText">Unlimited projects</p>
+                </td>
+                <td
+                  width="224"
+                  valign="bottom"
+                  style="
+                    width: 168pt;
+                    border-top: none;
+                    border-left: none;
+                    border-bottom: solid windowtext 1pt;
+                    border-right: solid windowtext 1pt;
+                    padding: 0.7pt 5.75pt 0.7pt 5.75pt;
+                    height: 31.7pt;
+                  "
+                >
+                  <p class="TableText">Unlimited projects</p>
+                </td>
+              </tr>
+              <tr style="page-break-inside: avoid; height: 21.5pt">
+                <td
+                  width="224"
+                  valign="bottom"
+                  style="
+                    width: 168pt;
+                    border: solid windowtext 1pt;
+                    border-top: none;
+                    padding: 0.7pt 5.75pt 0.7pt 5.75pt;
+                    height: 21.5pt;
+                  "
+                >
+                  <p class="TableText">25+ language</p>
+                </td>
+                <td
+                  width="224"
+                  valign="bottom"
+                  style="
+                    width: 168pt;
+                    border-top: none;
+                    border-left: none;
+                    border-bottom: solid windowtext 1pt;
+                    border-right: solid windowtext 1pt;
+                    padding: 0.7pt 5.75pt 0.7pt 5.75pt;
+                    height: 21.5pt;
+                  "
+                >
+                  <p class="TableText">25+ language</p>
+                </td>
+                <td
+                  width="224"
+                  valign="bottom"
+                  style="
+                    width: 168pt;
+                    border-top: none;
+                    border-left: none;
+                    border-bottom: solid windowtext 1pt;
+                    border-right: solid windowtext 1pt;
+                    padding: 0.7pt 5.75pt 0.7pt 5.75pt;
+                    height: 21.5pt;
+                  "
+                >
+                  <p class="TableText">25+ language</p>
+                </td>
+              </tr>
+              <tr style="page-break-inside: avoid; height: 21.5pt">
+                <td
+                  width="224"
+                  valign="bottom"
+                  style="
+                    width: 168pt;
+                    border: solid windowtext 1pt;
+                    border-top: none;
+                    padding: 0.7pt 5.75pt 0.7pt 5.75pt;
+                    height: 21.5pt;
+                  "
+                >
+                  <p class="TableText">90+ copywriting tools</p>
+                </td>
+                <td
+                  width="224"
+                  valign="bottom"
+                  style="
+                    width: 168pt;
+                    border-top: none;
+                    border-left: none;
+                    border-bottom: solid windowtext 1pt;
+                    border-right: solid windowtext 1pt;
+                    padding: 0.7pt 5.75pt 0.7pt 5.75pt;
+                    height: 21.5pt;
+                  "
+                >
+                  <p class="TableText">90+ copywriting tools</p>
+                </td>
+                <td
+                  width="224"
+                  valign="bottom"
+                  style="
+                    width: 168pt;
+                    border-top: none;
+                    border-left: none;
+                    border-bottom: solid windowtext 1pt;
+                    border-right: solid windowtext 1pt;
+                    padding: 0.7pt 5.75pt 0.7pt 5.75pt;
+                    height: 21.5pt;
+                  "
+                >
+                  <p class="TableText">90+ copywriting tools</p>
+                </td>
+              </tr>
+              <tr style="page-break-inside: avoid; height: 21.25pt">
+                <td
+                  width="224"
+                  valign="bottom"
+                  style="
+                    width: 168pt;
+                    border: solid windowtext 1pt;
+                    border-top: none;
+                    padding: 0.7pt 5.75pt 0.7pt 5.75pt;
+                    height: 21.25pt;
+                  "
+                >
+                  <p class="TableText">&nbsp;</p>
+                </td>
+                <td
+                  width="224"
+                  valign="bottom"
+                  style="
+                    width: 168pt;
+                    border-top: none;
+                    border-left: none;
+                    border-bottom: solid windowtext 1pt;
+                    border-right: solid windowtext 1pt;
+                    padding: 0.7pt 5.75pt 0.7pt 5.75pt;
+                    height: 21.25pt;
+                  "
+                >
+                  <p class="TableText">Priority support</p>
+                </td>
+                <td
+                  width="224"
+                  valign="bottom"
+                  style="
+                    width: 168pt;
+                    border-top: none;
+                    border-left: none;
+                    border-bottom: solid windowtext 1pt;
+                    border-right: solid windowtext 1pt;
+                    padding: 0.7pt 5.75pt 0.7pt 5.75pt;
+                    height: 21.25pt;
+                  "
+                >
+                  <p class="TableText">Priority support</p>
+                </td>
+              </tr>
+              <tr style="page-break-inside: avoid; height: 21.25pt">
+                <td
+                  width="224"
+                  valign="bottom"
+                  style="
+                    width: 168pt;
+                    border: solid windowtext 1pt;
+                    border-top: none;
+                    padding: 0.7pt 5.75pt 0.7pt 5.75pt;
+                    height: 21.25pt;
+                  "
+                >
+                  <p class="TableText">&nbsp;</p>
+                </td>
+                <td
+                  width="224"
+                  valign="bottom"
+                  style="
+                    width: 168pt;
+                    border-top: none;
+                    border-left: none;
+                    border-bottom: solid windowtext 1pt;
+                    border-right: solid windowtext 1pt;
+                    padding: 0.7pt 5.75pt 0.7pt 5.75pt;
+                    height: 21.25pt;
+                  "
+                >
+                  <p class="TableText">Access to our newest features</p>
+                </td>
+                <td
+                  width="224"
+                  valign="bottom"
+                  style="
+                    width: 168pt;
+                    border-top: none;
+                    border-left: none;
+                    border-bottom: solid windowtext 1pt;
+                    border-right: solid windowtext 1pt;
+                    padding: 0.7pt 5.75pt 0.7pt 5.75pt;
+                    height: 21.25pt;
+                  "
+                >
+                  <p class="TableText">Access to our newest features</p>
+                </td>
+              </tr>
+              <tr style="page-break-inside: avoid; height: 21.5pt">
+                <td
+                  width="224"
+                  valign="bottom"
+                  style="
+                    width: 168pt;
+                    border: solid windowtext 1pt;
+                    border-top: none;
+                    padding: 0.7pt 5.75pt 0.7pt 5.75pt;
+                    height: 21.5pt;
+                  "
+                >
+                  <p class="TableText">&nbsp;</p>
+                </td>
+                <td
+                  width="224"
+                  valign="bottom"
+                  style="
+                    width: 168pt;
+                    border-top: none;
+                    border-left: none;
+                    border-bottom: solid windowtext 1pt;
+                    border-right: solid windowtext 1pt;
+                    padding: 0.7pt 5.75pt 0.7pt 5.75pt;
+                    height: 21.5pt;
+                  "
+                >
+                  <p class="TableText">Premium community</p>
+                </td>
+                <td
+                  width="224"
+                  valign="bottom"
+                  style="
+                    width: 168pt;
+                    border-top: none;
+                    border-left: none;
+                    border-bottom: solid windowtext 1pt;
+                    border-right: solid windowtext 1pt;
+                    padding: 0.7pt 5.75pt 0.7pt 5.75pt;
+                    height: 21.5pt;
+                  "
+                >
+                  <p class="TableText">Premium community</p>
+                </td>
+              </tr>
+              <tr style="page-break-inside: avoid; height: 21.5pt">
+                <td
+                  width="224"
+                  valign="bottom"
+                  style="
+                    width: 168pt;
+                    border: solid windowtext 1pt;
+                    border-top: none;
+                    padding: 0.7pt 5.75pt 0.7pt 5.75pt;
+                    height: 21.5pt;
+                  "
+                >
+                  <p class="TableText">&nbsp;</p>
+                </td>
+                <td
+                  width="224"
+                  valign="bottom"
+                  style="
+                    width: 168pt;
+                    border-top: none;
+                    border-left: none;
+                    border-bottom: solid windowtext 1pt;
+                    border-right: solid windowtext 1pt;
+                    padding: 0.7pt 5.75pt 0.7pt 5.75pt;
+                    height: 21.5pt;
+                  "
+                >
+                  <p class="TableText">&nbsp;</p>
+                </td>
+                <td
+                  width="224"
+                  valign="bottom"
+                  style="
+                    width: 168pt;
+                    border-top: none;
+                    border-left: none;
+                    border-bottom: solid windowtext 1pt;
+                    border-right: solid windowtext 1pt;
+                    padding: 0.7pt 5.75pt 0.7pt 5.75pt;
+                    height: 21.5pt;
+                  "
+                >
+                  <p class="TableText">Collaboration features</p>
+                </td>
+              </tr>
+            </table></span
+          >
+        </p>
+        <div class="question-action-container">
+          <button class="MetroBtn show-answer">Show Answer</button>
+          <button class="MetroBtn hide-answer">Hide Answer</button>
+        </div>
+      </div>
+
+      <p class="ConfigWindow">Blank Line, No additional information</p>
+
+      <h2 style="margin-left: 0in; text-indent: 0in">
+        Part 3: Sign up and Create a Marketing Product
+      </h2>
+
+      <h3 style="margin-left: 0in; text-indent: 0in">
+        Step 1: Sign up for a free account.
+      </h3>
+
+      <p class="SubStepAlpha">
+        a.<span style="font: 7pt 'Times New Roman'"
+          >&nbsp;&nbsp;&nbsp;&nbsp; </span
+        >Sign up a free account using a method of your choosing.
+      </p>
+
+      <p class="SubStepAlpha">
+        b.<span style="font: 7pt 'Times New Roman'"
+          >&nbsp;&nbsp;&nbsp;&nbsp; </span
+        >CopyAI will provide you with information for registration. Use the
+        provided information to log into the account.
+      </p>
+
+      <p class="SubStepAlpha">
+        c.<span style="font: 7pt 'Times New Roman'"
+          >&nbsp;&nbsp;&nbsp;&nbsp; </span
+        >Provide the necessary information to CopyAI to register a new account.
+      </p>
+
+      <h3 style="margin-left: 0in; text-indent: 0in">
+        Step 2: Create a marketing product.
+      </h3>
+
+      <p class="BodyTextL25">
+        After you have signed up, you can create a new project.
+      </p>
+
+      <p class="SubStepAlpha">
+        a.<span style="font: 7pt 'Times New Roman'"
+          >&nbsp;&nbsp;&nbsp;&nbsp; </span
+        >Click <b>Create New Project</b>.
+      </p>
+
+      <p class="SubStepAlpha">
+        b.<span style="font: 7pt 'Times New Roman'"
+          >&nbsp;&nbsp;&nbsp;&nbsp; </span
+        >Provide a Project Title or skip this step.
+      </p>
+
+      <p class="SubStepAlpha">
+        c.<span style="font: 7pt 'Times New Roman'"
+          >&nbsp;&nbsp;&nbsp;&nbsp; </span
+        >If desired, choose a different tool to create your first product. For
+        example, in the left panel under the Tools heading, click
+        <b>Writing Tools</b> &gt; <b>Freestyle</b>.
+      </p>
+
+      <p class="SubStepAlpha">
+        d.<span style="font: 7pt 'Times New Roman'"
+          >&nbsp;&nbsp;&nbsp;&nbsp; </span
+        >In the field <b>Describe your product</b>, provide a short description
+        of your product.
+      </p>
+
+      <p class="SubStepAlpha">
+        e.<span style="font: 7pt 'Times New Roman'"
+          >&nbsp;&nbsp;&nbsp;&nbsp; </span
+        >Choose a tone if desired. Click <b>Create Copy</b> for AI generated
+        description.
+      </p>
+
+      <h4>Question:</h4>
+
+      <p class="BodyTextL50" style="margin-top: 0in">
+        Provide the text for your first product. Click <b>Show Answer </b>to
+        view a sample answer.
+      </p>
+
+      <!-- <p class="AnswerLineL50">Type your answers here.</p> -->
+      <div class="question-container">
+        <div class="AnswerLineL25">
+          <fieldset
+            style="width: 50%; font-size: 10px; font-style: normal; color: gray"
+          >
+            <legend>Answer Area</legend>
+            <textarea
+              rows="3"
+              name="answerArea"
+              placeholder="Type your answer here."
+              style="border: none; width: 100%"
+            ></textarea>
+          </fieldset>
+        </div>
+
+        <p class="Visual">
+          <span class="AnswerGray"
+            ><span style=" border: none"
+              ><span style="border: none"
+                ><img
+                  border="0"
+                  width="537"
+                  height="481"
+                  id="Picture 1"
+                  src="data:image/jpeg;base64,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"
+                  alt="Graphical user interface, text, application, email&#10;&#10;Description automatically generated" /></span></span
+          ></span>
+        </p>
+
+        <div class="question-action-container">
+          <button class="MetroBtn show-answer">Show Answer</button>
+          <button class="MetroBtn hide-answer">Hide Answer</button>
+        </div>
+      </div>
+
+      <!-- <p
+        class="Visual"
+        align="left"
+        style="
+          margin-top: 6pt;
+          margin-right: 0in;
+          margin-bottom: 12pt;
+          margin-left: 0.5in;
+          text-align: left;
+        "
+      >
+        <span class="AnswerGray"
+          ><span
+            style="
+              font-size: 10pt;
+              line-height: 115%;
+              
+              border: none;
+            "
+            ><img
+              border="0"
+              width="537"
+              height="481"
+              id="Picture 1"
+              src="./icons/3.1.5%20Lab%20-%20Explore%20CopyAI_files/image001.jpg"
+              alt="Graphical user interface, text, application, email&#10;&#10;Description automatically generated" /></span
+        ></span>
+      </p> -->
+
+      <h1>Reflection Question</h1>
+
+      <p class="BodyTextL25">
+        What feature offered by CopyAI makes the creation of a writing product
+        easier?
+      </p>
+
+      <!-- <p class="AnswerLineL25">Type your answers here.</p> -->
+      <div class="question-container">
+        <div class="AnswerLineL25">
+          <fieldset
+            style="width: 50%; font-size: 10px; font-style: normal; color: gray"
+          >
+            <legend>Answer Area</legend>
+            <textarea
+              rows="3"
+              name="answerArea"
+              placeholder="Type your answer here."
+              style="border: none; width: 100%"
+            ></textarea>
+          </fieldset>
+        </div>
+
+        <p class="BodyTextL25Answer">
+          <span class="AnswerGray"
+            ><span style=" border: none"
+              ><span style="border: none"
+                >Answer will vary. One feature offered by CopyAI is that it
+                provides various writing samples for a user to choose and
+                modify.</span
+              ></span
+            ></span
+          >
+        </p>
+
+        <div class="question-action-container">
+          <button class="MetroBtn show-answer">Show Answer</button>
+          <button class="MetroBtn hide-answer">Hide Answer</button>
+        </div>
+      </div>
+
+      <!-- <p class="BodyTextL25">
+        <span class="AnswerGray"
+          ><span style=" border: none"
+            ><span style="border: none">A</span></span
+          ></span
+        ><span class="AnswerGray"
+          ><span style=" border: none"
+            ><span style="border: none">nswer</span></span
+          ></span
+        ><span class="AnswerGray"
+          ><span style=" border: none"
+            ><span style="border: none"> will vary. One </span></span
+          ></span
+        ><span class="AnswerGray"
+          ><span style=" border: none"
+            ><span style="border: none"
+              >feature offered by CopyAI is that it provides various writing
+              samples for a user to choose and modify</span
+            ></span
+          ></span
+        ><span class="AnswerGray"
+          ><span style=" border: none"
+            ><span style="border: none">.</span></span
+          ></span
+        >
+      </p> -->
+
+      <p class="ConfigWindow">End of document</p>
+      <div class="global-action-container btn__container">
+        <button class="show-all-answers btn-text btn__action">
+          Show All Answers
+        </button>
+        <button class="hide-all-answers btn-text btn__action hidden">
+          Hide All Answers
+        </button>
+        <button class="clear-all-responces btn-text btn__action">
+          Clear My Responses
+        </button>
+      </div>
+
+      <div id="footerDIV">
+        <span
+          ><br />
+          <hr />
+          <span
+            style="
+              padding-right: 5px;
+              float: left;
+              font-family: arial;
+              font-size: 12px;
+            "
+            >© 2017 - 2022 Cisco and/or its affiliates. All rights reserved.
+            Cisco Public </span
+          ><br />
+        </span>
+      </div>
+    </div>
+  </body>
+  <script>
+    window.addEventListener("load", function () {
+      console.log("loaded");
+      document.querySelectorAll(".AnswerGray").forEach(function (ele) {
+        ele.classList.add("hidden");
+      });
+      document.querySelectorAll(".hide-answer").forEach(function (ele) {
+        ele.classList.add("hidden");
+      });
+      document.querySelectorAll(".show-answer").forEach(function (ele) {
+        ele.addEventListener("click", function (e) {
+          e.currentTarget.nextElementSibling.classList.remove("hidden");
+          e.currentTarget
+            .closest(".question-container")
+            .querySelectorAll(".AnswerGray")
+            .forEach(function (ele) {
+              ele.classList.remove("hidden");
+            });
+          ele.classList.add("hidden");
+        });
+      });
+      document.querySelectorAll(".hide-answer").forEach(function (ele) {
+        ele.addEventListener("click", function (e) {
+          e.currentTarget.previousElementSibling.classList.remove("hidden");
+          e.currentTarget
+            .closest(".question-container")
+            .querySelectorAll(".AnswerGray")
+            .forEach(function (ele) {
+              ele.classList.add("hidden");
+            });
+          ele.classList.add("hidden");
+        });
+      });
+      var event = new Event("click", {
+        bubbles: true,
+        cancelable: true,
+      });
+      document.querySelectorAll(".show-all-answers").forEach(function (ele) {
+        ele.addEventListener("click", function (e) {
+          e.currentTarget.nextElementSibling.classList.remove("hidden");
+          ele.classList.add("hidden");
+          document.querySelectorAll(".show-answer").forEach(function (ele) {
+            ele.dispatchEvent(event);
+          });
+        });
+      });
+
+      document.querySelectorAll(".hide-all-answers").forEach(function (ele) {
+        ele.addEventListener("click", function (e) {
+          e.currentTarget.previousElementSibling.classList.remove("hidden");
+          ele.classList.add("hidden");
+          document.querySelectorAll(".hide-answer").forEach(function (ele) {
+            ele.dispatchEvent(event);
+          });
+        });
+      });
+
+      document.querySelectorAll(".clear-all-responces").forEach(function (ele) {
+        ele.addEventListener("click", function (e) {
+          document.querySelectorAll("textArea").forEach(function (ele) {
+            ele.value = "";
+          });
+        });
+      });
+    });
+  </script>
+</html>

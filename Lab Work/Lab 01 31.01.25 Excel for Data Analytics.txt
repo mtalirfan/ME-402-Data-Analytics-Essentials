@@ -1,0 +1,103 @@
+A1 specific CELL
+: range operator
+A2:E6 CELL range
+A:A whole column range
+1:1 whole row range
+relative referencing
+$ absolute referencing (shortcut F4; add before column or row or both to keep them fixed) e.g.
+$A$2:$E$6 to fix the complete CELL range when moving formula anywhere
+A$2:A$6 to keep records in rows 2 to 6 fixed, useful if reusing a formula from left to right
+
+
+'Worksheet Name'!CELL:CELL referencing CELLs in another worksheet
+= FORMULA or FUNCTION
+FUNCTION(required argument, another required argument, [optional argument], ... [continuing optional arguments])
+
+
+Single quotes are used to identify the names of sheets e.g. 'Worksheet Name' in referencing another worksheet
+
+BUT
+
+Double quotes are used to indicate text in formulas or functions e.g.
+IF(CELL = "Text That Can Have Multiple Words", value_if_true, [value_if_false])
+Text Concatenation Operator:
+& e.g. = "North" & "wind"
+\ escape character
+
+The single and double quotes cannot be used interchangeably in Excel.
+
+
+Arithmetic Operators:
++ plus
+- minus
+* multiply
+/ divide
+% percentage
+^ exponent
+
+e.g.
+(net income after tax) = (income) - (income) * (tax percentage)%
+
+Comparison Operators:
+= equal
+> greater than
+< less than
+>= greater than or equal to
+<= less than or equal to
+<> not equal to
+
+e.g.
+IF(CELL >= 35, value_if_true, [value_if_false])
+
+
+FUNCTION(required argument, another required argument, [optional argument], ... [continuing optional arguments])
+
+SUM(number1,[number2],...)
+COUNT(value1, [value2], ...)
+
+SORT(array,[sort_index],[sort_order],[by_col])
+UNIQUE(array,[by_col],[exactly_once])
+nested SORT(UNIQUE()) to return a unique list in ascending order
+default: by_col = TRUE, exactly_one = FALSE
+set exactly_once argument to TRUE to return those values that appear only one time
+skip by_col argument: UNIQUE(array, , TRUE)
+
+SUMIF(range, criteria, [sum_range])
+COUNTIF(range, criteria)
+SUMIFS(sum_range, criteria_range1, criteria1, [criteria_range2, criteria2], ...)
+COUNTIFS(criteria_range1, criteria1, [criteria_range2, criteria2]…)
+
+FILTER(array,include,[if_empty])
+use (criteria)*(criteria) for include argument for multiple conditions in AND logic
+nested SORT(FILTER()) to return a filtered list in ascending order
+
+IF(logical_test, value_if_true, [value_if_false])
+nested IF(IF(...)) for multiple conditions
+IF(CELL = "", "", value_if_not_empty) to return empty value for an empty CELL
+
+DATE(year,month,day)
+serial_number - in a datetime format e.g. DD/MM/YYYY
+DAY(serial_number)
+MONTH(serial_number) - returns month in an integer
+YEAR(serial_number)
+
+TEXT(Value you want to format, "Format code you want to apply")
+for MONTH formatting in TEXT form, e.g. January:
+TEXT(serial_number, "mmmm")
+
+
+Tips and Best Practices for Creating Better Dashboards:
+Learning Step 1 : Learn How to Search Anything for Learning
+Use ChatGPT/Google for obtaining Questions from a Dataset for which we need the Answers, Using Data Analytics BEFORE actually starting the Analysis
+Adding Filter to the Header Row of a Dataset, Helps in Verifying the Accuracy of Functions used in Dashboards, especially when a Small Dataset can be Manually Verified
+Number Formatting e.g. Format Numeric Value in Specific Currency
+Data Validation e.g. Add Rules to CELLs to Allow Only Clean Data
+Creating Dashboards from a Dataset Worksheet in a single Workbook
+Formatting Tables to Make them Visually Appealing
+Data Visualization e.g. Charts to Provide Insights in a Glance, on a Dashboard
+
+
+Hotkeys:
+F1 : Help Documentation
+F4 : $ Absolute Referencing
+ctrl + H : Find and Replace
