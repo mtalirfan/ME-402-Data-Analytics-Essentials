@@ -1,0 +1,74 @@
+Making a Drop-Down list from a Column list, using Data Validation
+
+VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup])
+[range_lookup] : Approximate match - 1/TRUE (default) and Exact match - 0/FALSE
+
+=VLOOKUP($V$3, $A$2:$N$753,13, FALSE)
+
+Tip: Try using the new XLOOKUP function, an improved version of VLOOKUP that works in any direction and returns exact matches by default, making it easier and more convenient to use than its predecessor.
+
+IFNA(value, value_if_na)
+
+Use IFNA for values not found when using VLOOKUP e.g.
+
+=IFNA(VLOOKUP($V$3, $A$2:$N$753,13, FALSE), "Not Found")
+
+XLOOKUP(lookup_value, lookup_array, return_array, [if_not_found], [match_mode], [search_mode])
+
+=XLOOKUP($V$3, $A$2:$A$753, $S$2:$S$753, "Not Found")
+
+INDEX(array, row_num, [column_num])
+MATCH(lookup_value, lookup_array, [match_type])
+
+Use INDEX(MATCH()) as an alternative to VLOOKUP e.g.
+
+=INDEX($A$2:$S$753, MATCH($V$3, $A$2:$A$753, 0), 13)
+
+Add IFNA :
+=IFNA(INDEX($A$2:$S$753, MATCH($V$3, $A$2:$A$753, 0), 13), "Not Found")
+
+FILTER(array, include, [if_empty])
+
+=FILTER(M:M, A:A=V3, "Not Found")
+
+Lab Work 1: Dashboard workflow:
+
+Making single-level Dropdowns from Sales Data in a separate worksheet:
+=UNIQUE(SORT('Sales Data'!B2:B753))
+
+Colour-Format cells for better presentation.
+
+Use simple List Data Validation to create single-level drop-downs in Dashboard.
+
+CTRL + C to copy, then ALT + E + S to paste special, paste as values to remove functions and paste data as simple text
+
+Where multi-level data is available, such as Country and State, and Subcategory and Product, to make multi-level drop-downs:
+
+1) get data in a new worksheet using:
+=UNIQUE(SORTBY('Sales Data'!I2:J753, 'Sales Data'!I2:I753))
+
+2) Reformat the table, where the headers are top-level Country, and under each Country there are its States. Do this by any method, I did it manually since the data here was small. Optionally, create a table using Insert Table from this data, for easier reference.
+
+3) Then, select this new table entirely, make defined names in formulas tab, in Create from Selection under Defined Names
+
+4) To the right of the table, select a cell and create an XLOOKUP function, make sure the space below is empty since this function will spill States according to top-level Country selected in dashboard.
+=XLOOKUP(Dashboard!B1,Table4[#Headers],Table4, "")&""
+
+5) Finally, in Dashboard, select the State cell you want a drop-down of, and in data validation, add a # to the dynamic drop-down created in backend, States drop-downs Worksheet:
+='States Drop-Downs'!$L$5#
+
+L5# refers to the column L starting from L5, as we had the States drop-down for the selected Country spilling downwards in a column.
+
+Known issue in current Dashboard multi-level dropdowns:
+When Country or Subcategory are cleared, State and Product should clear automatically. This is possible using Excel Macros and i'm not writing code for excel.
+
+Single Dashboard Function:
+=IF(AND(ISBLANK(B1),ISBLANK(B2),ISBLANK(D2),ISBLANK(F1),ISBLANK(F2),ISBLANK(H2)),'Sales Data'!A2:S753, FILTER('Sales Data'!A:S,(IF(Dashboard!B1="",{1},('Sales Data'!I:I=Dashboard!B1)))*(IF(Dashboard!D1="",{1},('Sales Data'!J:J=Dashboard!D1)))*(IF(Dashboard!B2="",{1},('Sales Data'!H:H=Dashboard!B2)))*(IF(Dashboard!D2="",{1},('Sales Data'!G:G=Dashboard!D2)))*(IF(Dashboard!F1="",{1},('Sales Data'!L:L=Dashboard!F1)))*(IF(Dashboard!H1="",{1},('Sales Data'!M:M=Dashboard!H1)))*(IF(Dashboard!F2="",{1},('Sales Data'!B:B=Dashboard!F2)))*(IF(Dashboard!H2="",{1},('Sales Data'!A:A=Dashboard!H2))), "No Record Found"))
+
+Records found:
+=IF(A7="No Record Found", "0", ROWS(A7#))
+
+Custom formatting prompt to remove 0s in Dashboard:
+0;-0;;@
+
+A lot of bugs were manually tested and fixed, and there might be more edge-cases still left to handle.
