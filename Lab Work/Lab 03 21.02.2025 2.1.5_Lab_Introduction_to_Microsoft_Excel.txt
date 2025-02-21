@@ -1,0 +1,30 @@
+In addition to Excel, what are three other applications that are available for free with an Office.com account?
+
+Word, Powerpoint, Teams
+
+
+What happens if you type the coordinates of a cell directly into the Cell Name Box?
+
+The active, selected cell is now the one that is typed.
+
+
+How can you select more than one column or row?
+
+(1) Select the column or row and drag the mouse to select the desired number of columns or rows.
+(2) Select the column or row and hold down the Shift key on the keyboard and press the directional keys to select additional columns or rows.
+(3) Typing column or row names in the Cell Name Box, separated by a colon (e.g., A:D or 1:5).
+
+
+What is the result of typing A1:C5 in the Cell Name Box?
+
+The cell range A1 to C5 is selected.
+
+
+What happens to the data in a worksheet when the worksheet is deleted?
+
+The data is lost, unless it can be recovered from a previous version of the document.
+
+
+What keyboard shortcuts are used to bold, italicize, and underline cell contents?
+
+CTRL+ B for bold, CTRL + I for italics, and CTRL+U for underline.

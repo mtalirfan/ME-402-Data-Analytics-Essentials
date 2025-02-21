@@ -1,0 +1,18 @@
+Try entering a math formula with no equal sign in front. What is the result?
+
+Excel sees this as text and not as a formula.
+
+
+Write the formula(s) that could be used to add together the values in three cells, A10, A11, and A12, using cell references.
+
+= A10+A11+A12 or =SUM(A10:A12)
+
+
+If the MIN function finds the smallest value and the MAX function finds the largest value, what function is used to find the middle value? How would the formula be written for calculating the middle value in cells F2 through F6?
+
+MEDIAN, =MEDIAN(F2:F6)
+
+
+In addition to Date, Currency, and Percentage, what are five other common number format options in Excel?
+
+General, Accounting, Time, Fraction, Scientific, Special, and Custom.
