@@ -1,0 +1,15 @@
+What information is in the first line of the text file?
+
+header information for the data
+
+
+How many data columns do you expect to be in the data file generated from this CSV? What will the column headings be?\
+
+There are thirteen data columns. The headers are Date, Month, Year, Customer_Age, Age_Group, Gender, Country, State, Product_Category, Order_Quantity, Profit, Cost, and Revenue.
+
+
+What character is used as the delimiter to separate each piece of data in the file?
+
+comma
+
+
