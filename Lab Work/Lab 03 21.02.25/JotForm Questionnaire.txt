@@ -1,0 +1,31 @@
+My Form:
+https://form.jotform.com/250532620425043
+
+
+Add Conditional Logic for Versatile Functionality.
+It is always fun doing programming without writing code!
+
+Calculate age based on birthdate:
+
+https://www.jotform.com/answers/11288611-how-calculate-age-based-on-birthdate
+
+age in years = floor((today date - birthdate)/365.25)
+
+Each component in JotForm has a unique ID that can be used to do styling in CSS.
+
+Inject custom CSS codes:
+https://www.jotform.com/help/117-how-to-inject-custom-css-codes/
+
+
+For BLOCK LETTER display (this will just display, the output in filled form will NOT be capital), such as for Print Name in CAPITAL, copied from Client Name already filled in:
+
+https://www.jotform.com/answers/12050611-how-to-capitalized-all-letters-or-the-first-letter-entered-on-each-fields
+https://www.jotform.com/answers/18989091-format-all-text-to-uppercase
+
+#input_20 {
+text-transform: uppercase;
+}
+
+How to calculate the values of an Input Table field?
+
+https://www.jotform.com/answers/10043411-how-to-calculate-the-values-of-an-input-table-field
