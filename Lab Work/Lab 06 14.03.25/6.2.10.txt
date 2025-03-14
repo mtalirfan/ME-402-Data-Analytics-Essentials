@@ -1,0 +1,16 @@
+SELECT continent, SUM(population) AS total_population FROM countries GROUP BY continent HAVING total_population > 1000 ORDER BY total_population DESC
+
+
+SELECT year, COUNT(*) FROM nobel_prizes GROUP BY year
+
+
+SELECT year, COUNT(*) AS prize_count FROM nobel_prizes GROUP BY year ORDER BY prize_count DESC
+
+
+SELECT year, COUNT(category) AS category_count FROM nobel_prizes GROUP BY year ORDER BY category_count DESC
+
+
+SELECT year, COUNT(DISTINCT category) AS category_count FROM nobel_prizes GROUP BY year ORDER BY category_count DESC
+
+
+SELECT mpaa, AVG(revenue) AS avg_revenue FROM movies GROUP BY mpaa ORDER BY avg_revenue DESC

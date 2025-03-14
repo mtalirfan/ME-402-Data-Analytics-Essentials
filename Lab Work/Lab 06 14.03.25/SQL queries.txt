@@ -1,0 +1,63 @@
+14.03.25 Lab 06: SQL queries
+
+Acronyms:
+
+SQL: Structured Query Language
+DML: Data Manipulation Language e.g. SELECT, INSERT, UPDATE, and DELETE
+DDL: Data Definition Language
+RDBSs: Relational Database Systems
+ERD: Entity Relationship Diagram
+
+SQL Keywords:
+
+SELECT
+* (all)
+FROM
+WHERE
+ORDER BY ASC / DESC
+
+Logic Operators:
+
+= != > < >= <=
+AND OR NOT
+
+BETWEEN e.g. year BETWEEN 1976 AND 1980
+LIKE e.g. title LIKE 'Jaws%'
+IN e.g. year IN (1976, 1977, 1980)
+
+
+LIMIT
+AS
+-- Comments
+
+GROUP BY
+HAVING
+
+SUM() AVG() COUNT() MIN() MAX()
+DISTINCT
+
+COUNT(*)
+COUNT(DISTINCT category)
+
+
+Some sample SQL queries:
+
+SELECT * FROM shapes WHERE shape = 'circle' AND dots = 4;
+SELECT title, year FROM Movie WHERE year > 2000 ORDER BY year DESC LIMIT 100;
+
+SELECT substrate, COUNT(vehicle) AS number_vehicles FROM vehicles GROUP BY substrate;
+SELECT year, COUNT(*) AS prize_count FROM nobel_prizes GROUP BY year ORDER BY prize_count DESC;
+SELECT year, COUNT(DISTINCT category) AS category_count FROM nobel_prizes GROUP BY year ORDER BY category_count DESC;
+
+SELECT mpaa, AVG(revenue) AS avg_revenue FROM movies GROUP BY mpaa ORDER BY avg_revenue DESC;
+
+
+SELECT 	MovieID,
+		COUNT(*),
+		AVG(Score) AS Average,
+		MAX(Score) AS Max,
+		MIN(Score) AS Min,
+FROM	Review
+GROUP BY MovieID
+HAVING	Average > 7.0
+ORDER BY Average DESC;
