@@ -1,0 +1,7 @@
+Query:
+
+SELECT surname, COUNT(item_name) FROM bidders LEFT JOIN auction ON auction.winner_id=bidders.bidder_id GROUP BY bidders.bidder_id
+
+Using Aliases:
+
+SELECT surname, COUNT(item_name) FROM bidders AS b LEFT JOIN auction AS a ON a.winner_id = b.bidder_id GROUP BY b.bidder_id

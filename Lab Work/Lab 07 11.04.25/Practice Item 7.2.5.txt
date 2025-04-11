@@ -1,0 +1,1 @@
+SELECT surname, item_name FROM auction JOIN bidders ON auction.winner_id = bidders.bidder_id
